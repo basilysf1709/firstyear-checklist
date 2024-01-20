@@ -1,12 +1,11 @@
-import { Dropdown } from "@/components/Dropdown";
-import Sidebar from "@/components/Sidebar";
-import Image from "next/image";
+import { Homepage } from "@/components/Homepage";
+import { Sidebar } from "@/components/Sidebar";
 
 export default function Home() {
   return (
-    <>
-    <Sidebar />
-    <Dropdown />
-    </>
+    <div className="flex flex-row bg-gray-200">
+      <Sidebar />
+      <Homepage />
+    </div>
   );
 }

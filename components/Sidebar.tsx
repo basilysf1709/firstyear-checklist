@@ -1,60 +1,54 @@
-'use client'
-import React, { useState, ReactNode, SetStateAction, Dispatch  } from 'react';
+import Link from "next/link"
 
-interface SidebarButtonProps {
-  icon: ReactNode;
-  tabName: string;
-  currentTab: string | null;
-  setCurrentTab: any;
+export const Sidebar = () => {
+  return (
+    <aside className="sticky top-0 flex flex-col items-center w-16 h-screen py-8 overflow-y-auto bgWhite border-r rtl:borderL rtl:border-r-0 bg-gray-900">
+      <nav className="flex flex-col flex-1 space-y-6">
+
+        <Link href="#" className="p-1.5 focus:outline-nones transition-colors duration-200 roundedLg text-gray-200 hover:bg-gray-800">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+          </svg>
+        </Link>
+
+        <Link href="#" className="p-1.5 focus:outline-nones transition-colors duration-200 roundedLg text-gray-200 hover:bg-gray-800">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+          </svg>
+        </Link>
+
+        <Link href="#" className="p-1.5 focus:outline-nones transition-colors duration-200 roundedLg text-gray-200 hover:bg-gray-800">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M11.35 3.836c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m8.9-4.414c.376.023.75.05 1.124.08 1.131.094 1.976 1.057 1.976 2.192V16.5A2.25 2.25 0 0118 18.75h-2.25m-7.5-10.5H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V18.75m-7.5-10.5h6.375c.621 0 1.125.504 1.125 1.125v9.375m-8.25-3l1.5 1.5 3-3.75" />
+          </svg>
+        </Link>
+
+        <Link href="#" className="p-1.5 focus:outline-nones transition-colors duration-200 roundedLg text-gray-200 hover:bg-gray-800">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M3 3v1.5M3 21v-6m0 0l2.77-.693a9 9 0 016.208.682l.108.054a9 9 0 006.086.71l3.114-.732a48.524 48.524 0 01-.005-10.499l-3.11.732a9 9 0 01-6.085-.711l-.108-.054a9 9 0 00-6.208-.682L3 4.5M3 15V4.5" />
+          </svg>
+        </Link>
+
+        <Link href="#" className="p-1.5 focus:outline-nones transition-colors duration-200 roundedLg text-gray-200 hover:bg-gray-800">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+          </svg>
+        </Link>
+      </nav>
+
+      <div className="flex flex-col space-y-6">
+        <Link href="https//" className="p-1.5 focus:outline-nones transition-colors duration-200 roundedLg text-gray-200 hover:bg-gray-800">
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0,0,256,256" className="w-6 h-6">
+            <g fill="#ffffff" fillRule="nonzero" stroke="none" strokeWidth="1" strokeLinecap="butt" strokeLinejoin="miter" strokeMiterlimit="10" strokeDasharray="" strokeDashoffset="0" fontFamily="none" fontWeight="none" fontSize="none" textAnchor="none"><g transform="scale(5.12,5.12)"><path d="M34.21875,5.46875c-5.98047,0 -10.84375,4.86328 -10.84375,10.84375c0,0.35938 0.08984,0.71094 0.125,1.0625c-7.39453,-0.70703 -13.93359,-4.26953 -18.375,-9.71875c-0.20703,-0.26172 -0.52734,-0.40234 -0.86328,-0.37891c-0.33203,0.02344 -0.62891,0.21484 -0.79297,0.50391c-0.93359,1.60547 -1.46875,3.45313 -1.46875,5.4375c0,2.40234 0.85938,4.60156 2.1875,6.40625c-0.25781,-0.11328 -0.53906,-0.17578 -0.78125,-0.3125c-0.30859,-0.16406 -0.67969,-0.15625 -0.98047,0.02344c-0.30078,0.17969 -0.48438,0.50391 -0.48828,0.85156v0.125c0,3.68359 1.90625,6.88281 4.71875,8.84375c-0.03125,-0.00391 -0.0625,0.00781 -0.09375,0c-0.34375,-0.05859 -0.69141,0.0625 -0.92187,0.32422c-0.23047,0.26172 -0.30469,0.625 -0.20312,0.95703c1.11719,3.47266 3.96875,6.125 7.5,7.09375c-2.8125,1.67188 -6.07422,2.65625 -9.59375,2.65625c-0.76172,0 -1.49219,-0.03906 -2.21875,-0.125c-0.46875,-0.0625 -0.91797,0.21094 -1.07422,0.65625c-0.16016,0.44531 0.01563,0.94141 0.41797,1.1875c4.51172,2.89453 9.86719,4.59375 15.625,4.59375c9.33203,0 16.65234,-3.89844 21.5625,-9.46875c4.91016,-5.57031 7.46875,-12.80469 7.46875,-19.5625c0,-0.28516 -0.02344,-0.5625 -0.03125,-0.84375c1.83203,-1.40234 3.46875,-3.04687 4.75,-4.96875c0.25391,-0.37109 0.22656,-0.86719 -0.06641,-1.21094c-0.28906,-0.34375 -0.77734,-0.44922 -1.18359,-0.25781c-0.51562,0.23047 -1.11719,0.25391 -1.65625,0.4375c0.71094,-0.94922 1.32031,-1.97266 1.6875,-3.125c0.125,-0.39453 -0.01172,-0.82812 -0.33594,-1.08594c-0.32422,-0.25391 -0.77734,-0.28516 -1.13281,-0.07031c-1.70703,1.01172 -3.59766,1.72266 -5.59375,2.15625c-1.9375,-1.8125 -4.48828,-3.03125 -7.34375,-3.03125zM34.21875,7.46875c2.55078,0 4.85547,1.08984 6.46875,2.8125c0.24219,0.25 0.59766,0.35547 0.9375,0.28125c1.30469,-0.25781 2.54297,-0.63672 3.75,-1.125c-0.69531,0.9375 -1.55469,1.73828 -2.5625,2.34375c-0.45703,0.22266 -0.67187,0.75 -0.50391,1.23047c0.16406,0.47656 0.66406,0.75391 1.16016,0.64453c1,-0.12109 1.89063,-0.52734 2.84375,-0.78125c-0.85547,0.92578 -1.79297,1.76172 -2.8125,2.5c-0.27734,0.20313 -0.42969,0.53125 -0.40625,0.875c0.01563,0.40625 0.03125,0.80859 0.03125,1.21875c0,6.25 -2.39844,13.03516 -6.96875,18.21875c-4.57031,5.18359 -11.28125,8.8125 -20.0625,8.8125c-3.98828,0 -7.75391,-0.88281 -11.15625,-2.4375c4.21875,-0.32422 8.10938,-1.81641 11.25,-4.28125c0.32813,-0.26172 0.45703,-0.69922 0.32422,-1.09766c-0.13281,-0.39844 -0.5,-0.67187 -0.91797,-0.68359c-3.29687,-0.05859 -6.05859,-1.97656 -7.53125,-4.6875c0.05469,0 0.10156,0 0.15625,0c0.98828,0 1.96484,-0.125 2.875,-0.375c0.4375,-0.12891 0.73828,-0.53516 0.72266,-0.99219c-0.01562,-0.45703 -0.33984,-0.84766 -0.78516,-0.94531c-3.55859,-0.71875 -6.22656,-3.61719 -6.84375,-7.21875c1.00781,0.34766 2.03906,0.62109 3.15625,0.65625c0.45703,0.02734 0.87109,-0.25781 1.01172,-0.69141c0.14063,-0.43359 -0.03125,-0.91016 -0.41797,-1.15234c-2.375,-1.58984 -3.9375,-4.29687 -3.9375,-7.375c0,-1.14062 0.29688,-2.1875 0.6875,-3.1875c5,5.48828 12,9.13281 19.90625,9.53125c0.3125,0.01563 0.61719,-0.11328 0.82031,-0.35156c0.20313,-0.24219 0.28125,-0.5625 0.21094,-0.86719c-0.15234,-0.64844 -0.25,-1.33594 -0.25,-2.03125c0,-4.89844 3.94531,-8.84375 8.84375,-8.84375z"></path></g></g>
+          </svg>
+        </Link>
+
+        <Link href="#" className="p-1.5 focus:outline-nones transition-colors duration-200 roundedLg text-gray-200 hover:bg-gray-800">
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0,0,256,256" className="w-6 h-6">
+            <g fill="#ffffff" fillRule="nonzero" stroke="none" strokeWidth="1" strokeLinecap="butt" strokeLinejoin="miter" strokeMiterlimit="10" strokeDasharray="" strokeDashoffset="0" fontFamily="none" fontWeight="none" fontSize="none" textAnchor="none"><g transform="scale(5.12,5.12)"><path d="M9,4c-2.74952,0 -5,2.25048 -5,5v32c0,2.74952 2.25048,5 5,5h32c2.74952,0 5,-2.25048 5,-5v-32c0,-2.74952 -2.25048,-5 -5,-5zM9,6h32c1.66848,0 3,1.33152 3,3v32c0,1.66848 -1.33152,3 -3,3h-32c-1.66848,0 -3,-1.33152 -3,-3v-32c0,-1.66848 1.33152,-3 3,-3zM14,11.01172c-1.09522,0 -2.08078,0.32736 -2.81055,0.94141c-0.72977,0.61405 -1.17773,1.53139 -1.17773,2.51367c0,1.86718 1.61957,3.32281 3.67969,3.4668c0.0013,0.00065 0.0026,0.0013 0.00391,0.00195c0.09817,0.03346 0.20099,0.05126 0.30469,0.05273c2.27301,0 3.98828,-1.5922 3.98828,-3.52148c-0.00018,-0.01759 -0.00083,-0.03518 -0.00195,-0.05274c-0.10175,-1.90023 -1.79589,-3.40234 -3.98633,-3.40234zM14,12.98828c1.39223,0 1.94197,0.62176 2.00195,1.50391c-0.01215,0.85625 -0.54186,1.51953 -2.00195,1.51953c-1.38541,0 -2.01172,-0.70949 -2.01172,-1.54492c0,-0.41771 0.15242,-0.7325 0.47266,-1.00195c0.32023,-0.26945 0.83428,-0.47656 1.53906,-0.47656zM11,19c-0.55226,0.00006 -0.99994,0.44774 -1,1v19c0.00006,0.55226 0.44774,0.99994 1,1h6c0.55226,-0.00006 0.99994,-0.44774 1,-1v-5.86523v-13.13477c-0.00006,-0.55226 -0.44774,-0.99994 -1,-1zM20,19c-0.55226,0.00006 -0.99994,0.44774 -1,1v19c0.00006,0.55226 0.44774,0.99994 1,1h6c0.55226,-0.00006 0.99994,-0.44774 1,-1v-10c0,-0.82967 0.22639,-1.65497 0.625,-2.19531c0.39861,-0.54035 0.90147,-0.86463 1.85742,-0.84766c0.98574,0.01695 1.50758,0.35464 1.90234,0.88477c0.39477,0.53013 0.61523,1.32487 0.61523,2.1582v10c0.00006,0.55226 0.44774,0.99994 1,1h6c0.55226,-0.00006 0.99994,-0.44774 1,-1v-10.73828c0,-2.96154 -0.87721,-5.30739 -2.38086,-6.89453c-1.50365,-1.58714 -3.59497,-2.36719 -5.80664,-2.36719c-2.10202,0 -3.70165,0.70489 -4.8125,1.42383v-0.42383c-0.00006,-0.55226 -0.44774,-0.99994 -1,-1zM12,21h4v12.13477v4.86523h-4zM21,21h4v1.56055c0.00013,0.43 0.27511,0.81179 0.68291,0.94817c0.40781,0.13638 0.85714,-0.00319 1.11591,-0.34661c0,0 1.57037,-2.16211 5.01367,-2.16211c1.75333,0 3.25687,0.58258 4.35547,1.74219c1.0986,1.15961 1.83203,2.94607 1.83203,5.51953v9.73828h-4v-9c0,-1.16667 -0.27953,-2.37289 -1.00977,-3.35352c-0.73023,-0.98062 -1.9584,-1.66341 -3.47266,-1.68945c-1.52204,-0.02703 -2.77006,0.66996 -3.50195,1.66211c-0.73189,0.99215 -1.01562,2.21053 -1.01562,3.38086v9h-4z"></path></g></g>
+          </svg>
+        </Link>
+      </div>
+    </aside>
+  )
 }
-
-const SidebarButton: React.FC<SidebarButtonProps> = ({ icon, tabName, currentTab, setCurrentTab }) => {
-  const isCurrentTab = currentTab === tabName;
-
-  const handleButtonClick = () => {
-    if (isCurrentTab) {
-      setCurrentTab(null); // Closes the sidebar if the same tab is clicked
-    } else {
-      setCurrentTab(tabName);
-    }
-  };
-
-  return (
-    <button
-      onClick={handleButtonClick}
-      className={`p-2 transition-colors rounded-lg shadow-md focus:outline-none focus:ring focus:ring-indigo-600 focus:ring-offset-white focus:ring-offset-2 ${
-        isCurrentTab ? 'text-white bg-indigo-600' : 'text-gray-500 bg-white'
-      } hover:bg-indigo-800 hover:text-white`}
-    >
-      <span className="sr-only">Toggle {tabName} panel</span>
-      <svg
-        aria-hidden="true"
-        className="w-6 h-6"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        {icon}
-      </svg>
-    </button>
-  );
-};
-
-const Sidebar = () => {
-  const [currentTab, setCurrentTab] = useState(null);
-
-  return (
-    <div className="flex flex-col items-center flex-1 p-2 space-y-4">
-      <SidebarButton
-        icon={<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" />}
-        tabName="linksTab"
-        currentTab={currentTab}
-        setCurrentTab={setCurrentTab}
-      />
-      {/* ... other buttons */}
-    </div>
-  );
-};
-
-export default Sidebar;
