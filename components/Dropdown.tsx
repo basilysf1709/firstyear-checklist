@@ -1,21 +1,10 @@
 'use client'
 
 import { useState } from "react";
-
-interface CheckboxItem {
-  title: string;
-  description: string;
-}
-
-interface DropdownProps {
-  headTitle: string;
-  items: CheckboxItem[];
-}
+import { DropdownProps } from "@/types/types";
 
 export const Dropdown: React.FC<DropdownProps> = ({headTitle, items}) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
-  // Toggle dropdown visibility
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
