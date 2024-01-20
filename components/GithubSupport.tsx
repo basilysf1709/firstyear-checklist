@@ -14,7 +14,7 @@ const GitHubSupport = () => {
         If you appreciate our work, give us a star on GitHub and consider contributing!
       </p>
       <a 
-        href="https://github.com/your-username/your-repo" 
+        href="https://github.com/basilysf1709/firstyear-checklist" 
         target="_blank" 
         rel="noopener noreferrer"
         className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-black hover:bg-gray-800"
