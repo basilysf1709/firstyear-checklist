@@ -19,17 +19,17 @@ export const Homepage = () => {
                 <div className="w-11/12">
                     <div className="sm:hidden">
                         <label htmlFor="tabs" className="sr-only">Select your program</label>
-                        <select id="tabs" className="text-white bg-gray-900 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" onChange={handleProgramChange}>
+                        <select id="tabs" className="text-white bg-gray-900 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 h-12" onChange={handleProgramChange}>
                             <option>Co-op</option>
                             <option>Non Co-op</option>
                         </select>
                     </div>
                     <ul className="hidden text-sm font-medium text-center text-white rounded-lg shadow sm:flex">
                         <li className="w-full">
-                            <a href="#" className={`inline-block w-full p-4 bg-gray-800 border-r border-gray-200 hover:bg-gray-600 ${programType === "Co-op" ? "bg-gray-600" : ""}`} onClick={() => setProgramType("Co-op")} aria-current={programType === "Co-op" ? "page" : undefined}>Co-op</a>
+                            <a className={`inline-block w-full p-4 bg-gray-800 border-r border-gray-200 hover:bg-gray-600 ${programType === "Co-op" ? "bg-gray-600" : ""}`} onClick={() => setProgramType("Co-op")} aria-current={programType === "Co-op" ? "page" : undefined}>Co-op</a>
                         </li>
                         <li className="w-full">
-                            <a href="#" className={`inline-block w-full p-4 bg-gray-800 border-r border-gray-200 hover:bg-gray-600 ${programType === "Non Co-op" ? "bg-gray-600" : ""}`} onClick={() => setProgramType("Non Co-op")}>Non Co-op</a>
+                            <a className={`inline-block w-full p-4 bg-gray-800 border-r border-gray-200 hover:bg-gray-600 ${programType === "Non Co-op" ? "bg-gray-600" : ""}`} onClick={() => setProgramType("Non Co-op")}>Non Co-op</a>
                         </li>
                     </ul>
                 </div>
